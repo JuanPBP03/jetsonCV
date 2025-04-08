@@ -23,9 +23,8 @@ pip install tensorflow-gpu opencv-python opencv-python-headless
 ```
 While installing the library, we found that tensorflow-gpu is the same as tensorflow, and that tensorflow-gpu doesn't exist anymore.
 
-## S
-
-
+The full code is listed below:
+```python
 import cv2
 import numpy as np
 import tensorflow as tf
@@ -101,3 +100,23 @@ with detection_graph.as_default():
         # Release the capture and close the window
         cap.release()
         cv2.destroyAllWindows()
+```
+
+## Step 5
+Implement instructions from ChatGPT.
+##### Install the dependencies:
+```bash
+pip install tensorflow
+pip install tensorflow-hub
+pip install tensorflow-object-detection-api
+```
+The other dependencies were already already installed.
+When we tried to run the code, we received an error.
+
+We had to uninstall numpy and reinstall and older version.
+```bash
+pip install numpy==1.21.0
+```
+
+## Step 5
+Previous step didn't work so we decided to install anaconda to help manage dependencies.
