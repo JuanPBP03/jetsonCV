@@ -10,8 +10,8 @@ if physical_devices:
     tf.config.experimental.set_memory_growth(physical_devices[0], True)
 
 # Load the object detection model (MobileNetV1)
-MODEL_PATH = 'ssd_mobilenet_v1_coco_2017_11_17/frozen_inference_graph.pb'
-LABEL_MAP_PATH = 'mscoco_label_map.pbtxt'
+MODEL_PATH = 'MobileNet/mobilenet_v1_1.0_224_frozen.pb'
+LABEL_MAP_PATH = 'MobileNet/mobilenet_v1_1.0_224_eval.pbtxt'
 
 # Load the pre-trained model
 detection_graph = tf.Graph()
