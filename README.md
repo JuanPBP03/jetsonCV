@@ -44,6 +44,7 @@ Here are the tools considered and used:
 ## Pre-trained Model Choice
 
 We selected **YOLOv8n** (nano version) from the [Ultralytics YOLO repository](https://github.com/ultralytics/ultralytics). Reasons:
+- [Guide](https://docs.ultralytics.com/guides/nvidia-jetson/) provided by Ultralytics.
 - Lightweight, optimized for real-time edge applications
 - Strong accuracy-performance balance
 - Easy to export to TensorRT
