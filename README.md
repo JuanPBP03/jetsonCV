@@ -14,8 +14,8 @@ Our setup involves the following:
 
 ### Hardware:
 - **NVIDIA Jetson Orin Nano Developer Kit**
-- **Logitech C270 USB Camera** (720p webcam for real-time input)
-- **256GB microSD card** (JetPack 6.1 flashed)
+- **USB Camera**
+- **256GB microSD card** 
 - Power supply, monitor, keyboard/mouse
 
 ### Software:
