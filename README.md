@@ -36,7 +36,7 @@ Here are the tools considered and used:
 |----------------|-----------------------------------------------|-------------------------|------------------------------------------|
 | Framework      | TensorRT, ONNX Runtime, OpenVINO              | **TensorRT**            | Native to Jetson, GPU-accelerated        |
 | Model      | YOLOv8, MobileNet-SSD            | **YOLOv8n**             | Optimized, fast, highly accurate         |
-| Preprocessing  | OpenCV, NPP, TorchVision                      | **OpenCV + CUDA**       | Easy integration, real-time performance  |
+| Preprocessing  | OpenCV, TorchVision                      | **OpenCV**       | Easy integration, real-time performance  |
 | Profiling      | `tegrastats`, `jtop`, `perf`, `nvprof`        | **jtop**          | Light and Jetson-native resource monitor |
 
 ---
