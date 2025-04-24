@@ -23,6 +23,7 @@ Our setup involves the following:
 - **Ultralytics YOLOv8**
 - **Python**
 - **PyTorch with Jetson GPU support**
+- **TensorRT**
 - **OpenCV**
 - Git and VSCode for code editing
 
@@ -34,7 +35,7 @@ Here are the tools considered and used:
 
 | Category        | Options Researched                            | Final Selection         | Reasoning                                |
 |----------------|-----------------------------------------------|-------------------------|------------------------------------------|
-| Framework      | TensorRT, ONNX Runtime, OpenVINO              | **TensorRT**            | Native to Jetson, GPU-accelerated        |
+| Framework      | TensorRT, TensorFlow, Keras, Torch              | **TensorRT**            | Native to Jetson, GPU-accelerated        |
 | Model      | YOLOv8, MobileNet-SSD            | **YOLOv8n**             | Optimized, fast, highly accurate         |
 | Preprocessing  | OpenCV, TorchVision                      | **OpenCV**       | Easy integration, real-time performance  |
 | Profiling      | `tegrastats`, `jtop`, `perf`, `nvprof`        | **jtop**          | Light and Jetson-native resource monitor |
