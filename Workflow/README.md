@@ -62,8 +62,9 @@ yolo export model=yolo11n.pt format=engine # creates 'yolo11n.engine'
 ## Step 5: Develop Python script
 
 Using OpenCV we developped a python script to perform inference with our model frame-by-frame. It follows the typical OpenCV workflow of opening the video feed, reading each frame, extracting data from the frame, and using that data to draw on the original frame of the video. In this case, our video feed is from the webcam provided, and we extract data by passing each frame to the model with ```results = model(frame)```. Each results object contains the bounding boxes of objects detected in the frame, and each box object contains the location information in various formats, the confidence of the detection, and metadata such as the id corresponding to the label it has detected (for more information see [here](https://docs.ultralytics.com/modes/predict/#boxes)). Using this information we used OpenCV functions including ```rectangle()``` and ```putText``` to draw the boxes, labels, and confidence values on each frame.
-
- While the program was working initially, due to unknown reasons, it no longer produced a video feed. However, we were able to gather some results indicating that it was using GPU acceleration:
+# Results
+*see video in this folder for full video*
+While the program was working initially, due to unknown reasons, it no longer produced a video feed. However, we were able to gather some results indicating that it was using GPU acceleration:
 ![2dea4f87-d75c-495c-96e5-9c835da27b14](https://github.com/user-attachments/assets/a815103b-a0f5-4247-bd57-584f127b8f68)
 
 Additionally, we were able to capture a video from another device of the initial run.
