@@ -68,7 +68,7 @@ Using OpenCV we developped a python script to perform inference with our model f
 
 Additionally, we were able to capture a video from another device of the initial run.
 Here is a screenshot from the video showing the GPU utilization, as well as a frame of the results:
-![2dea4f87-d75c-495c-96e5-9c835da27b14](https://github.com/user-attachments/assets/90ea8b0b-e810-4d34-9ab2-b5c55d418035)
+![image](https://github.com/user-attachments/assets/ff25727c-a6e1-4435-83e6-1ea3179fcb58)
 
 
 
