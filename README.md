@@ -53,11 +53,16 @@ pip install https://github.com/ultralytics/assets/releases/download/v0.0.0/onnxr
 
 ## Step 4: Convert model to TensorRT
 
-Due to TensorRT's high performance on Jetson devices, we exported the YOLO model from PyTorch format to TensorRT.
+Due to TensorRT's high performance on Jetson devices, we exported the YOLO11 model from PyTorch format to TensorRT.
 ```bash
 # Executed in repo directory
 yolo export model=yolo11n.pt format=engine # creates 'yolo11n.engine'
 ```
+
+## Step 5: Develop Python script
+
+Using OpenCV we developped a python script to perform inference with our model frame-by-frame. It follows the typical OpenCV workflow of opening the video feed, reading each frame, extracting data from the frame, and using that data to draw on the original frame of the video. In this case, our video feed is from the webcam provided, and we extract data by passing each frame to the model with ```results = model(frame)```. Each results object contains the bounding boxes of objects detected in the frame, and each box object contains the location information in various formats, the confidence of the detection, and metadata such as the id corresponding to the label it has detected (for more information see [here](https://docs.ultralytics.com/modes/predict/#boxes)). Using this information we used OpenCV functions including ```rectangle()``` and ```putText``` to draw the boxes, labels, and confidence values on each frame.
+
 
 
 
