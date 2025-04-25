@@ -71,7 +71,8 @@ Additionally, we were able to capture a video from another device of the initial
 Here is a screenshot from the video showing the GPU utilization, as well as a frame of the results:
 ![image](https://github.com/user-attachments/assets/ff25727c-a6e1-4435-83e6-1ea3179fcb58)
 
-
+Fixing Errors
+Although our original workflow worked the first time we ran it. It stopped working during subsequent trials. After some troubleshooting, it seemed like the problem was encountered when we were trying to get the bounding box coordinates using the map function """
 
 
 
