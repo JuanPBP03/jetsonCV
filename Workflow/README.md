@@ -86,5 +86,16 @@ y1 = int(box.xyxy[0][1].item())
 x2 = int(box.xyxy[0][2].item())
 y2 = int(box.xyxy[0][3].item())
 ```
+# New Results
+### Object Detection Result:
+![image](https://github.com/user-attachments/assets/79780d78-f567-4532-aedc-7d8e33aff9f6)
 
+### Inference Time:
+![image](https://github.com/user-attachments/assets/891a71fa-e01f-4d06-9ad9-6e9e57cbe865)
+
+### GPU utilization before running the object detection:
+![Screenshot from 2025-04-25 15-00-34](https://github.com/user-attachments/assets/d7f7fc6d-44df-42f0-8ee1-2ab24dc069b3)
+
+### GPU utilization after running the object detection:
+![image](https://github.com/user-attachments/assets/45e0ff42-0518-40f5-b0c0-bc04531a5185)
 
