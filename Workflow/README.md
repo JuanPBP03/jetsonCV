@@ -62,7 +62,8 @@ yolo export model=yolo11n.pt format=engine # creates 'yolo11n.engine'
 ## Step 5: Develop Python script
 
 Using OpenCV we developped a python script to perform inference with our model frame-by-frame. It follows the typical OpenCV workflow of opening the video feed, reading each frame, extracting data from the frame, and using that data to draw on the original frame of the video. In this case, our video feed is from the webcam provided, and we extract data by passing each frame to the model with ```results = model(frame)```. Each results object contains the bounding boxes of objects detected in the frame, and each box object contains the location information in various formats, the confidence of the detection, and metadata such as the id corresponding to the label it has detected (for more information see [here](https://docs.ultralytics.com/modes/predict/#boxes)). Using this information we used OpenCV functions including ```rectangle()``` and ```putText``` to draw the boxes, labels, and confidence values on each frame.
-# Results
+
+## Results
 *see video in this folder for full video*
 While the program was working initially, due to unknown reasons, it no longer produced a video feed. However, we were able to gather some results indicating that it was using GPU acceleration:
 ![2dea4f87-d75c-495c-96e5-9c835da27b14](https://github.com/user-attachments/assets/a815103b-a0f5-4247-bd57-584f127b8f68)
@@ -71,8 +72,19 @@ Additionally, we were able to capture a video from another device of the initial
 Here is a screenshot from the video showing the GPU utilization, as well as a frame of the results:
 ![image](https://github.com/user-attachments/assets/ff25727c-a6e1-4435-83e6-1ea3179fcb58)
 
-Fixing Errors
-Although our original workflow worked the first time we ran it. It stopped working during subsequent trials. After some troubleshooting, it seemed like the problem was encountered when we were trying to get the bounding box coordinates using the map function """
+## Fixing Errors
+Although our original workflow worked the first time we ran it. It stopped working during subsequent trials. After some troubleshooting, it seemed like the problem was encountered when we were trying to get the bounding box coordinates using the map function.
+```
+x1, y1, x2, y2 = map(int, box.xyxy[0])
+```
+For some reason, the map function was halting the execution of the while loop.
 
+If you run into this issue, then delete the line that uses the map function and get the bounding box coordinates directly from the tensor using the item() method.
+```
+x1 = int(box.xyxy[0][0].item())
+y1 = int(box.xyxy[0][1].item())
+x2 = int(box.xyxy[0][2].item())
+y2 = int(box.xyxy[0][3].item())
+```
 
 
